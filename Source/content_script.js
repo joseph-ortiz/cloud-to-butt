@@ -33,16 +33,16 @@ function handleText(textNode) {
 	var v = textNode.nodeValue;
 
   // Deal with the easy case
-  v = v.replace(/\b(C|c)(B|b)/g, function(match, p1, p2, offset, string) {
+  v = v.replace(/\b(C|c)areer(B|b)uilder|(C|c)(B|b), function(match, p1, p2, offset, string) {
     // t - 7 = m
     // c - 1 = b
     m = String.fromCharCode(p1.charCodeAt(0) - 7);
     b = String.fromCharCode(p2.charCodeAt(0) - 1);
-    return m + " " + b + "ean";
+    return m + " " + b + "utt";
   });
 
   // Deal with private clouds
-  v = v.replace(/\b(P|p)rivate (C|c)loud/g, function(match, p1, p2, offset, string) {
+  v = v.replace(/\b(C|c)areer(B|b)uilder|(C|c)(B|b)/g, function(match, p1, p2, offset, string) {
     // c - 1 = b
     b = String.fromCharCode(p2.charCodeAt(0) - 1);
     return b + "ean";
